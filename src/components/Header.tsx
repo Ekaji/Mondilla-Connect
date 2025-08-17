@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from './ThemeToggle'; // Import the theme toggle component
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,9 +13,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 hero-gradient rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">M</span>
-              </div>
+              <img src="/src/assets/favicon-2.png" alt="Mondilla Connect" className="w-8 h-8" />
               <span className="font-bold text-xl">Mondilla Connect</span>
             </div>
           </div>
@@ -35,15 +34,17 @@ const Header = () => {
             </a>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex">
+          {/* Desktop Actions (Theme Toggle + CTA Button) */}
+          <div className="hidden md:flex items-center space-x-3">
+            <ThemeToggle />
             <Button className="hero-gradient text-primary-foreground hover:shadow-lg hover:scale-105 transition-all">
               Get Started Free
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          {/* Mobile Actions (Theme Toggle + Menu Button) */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="sm"
