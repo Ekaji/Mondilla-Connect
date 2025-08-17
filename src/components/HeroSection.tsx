@@ -63,56 +63,7 @@ const HeroSection = () => {
           {/* Hero Illustration */}
           <div className="lg:pl-8 animate-fade-in animate-delay-200">
             <div className="relative">
-              <div className="bg-surface-gradient rounded-2xl p-8 border border-card-border glow-primary">
-                {/* Mock Dashboard */}
-                <div className="space-y-6">
-                  {/* Header */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 hero-gradient rounded-lg"></div>
-                      <div className="space-y-1">
-                        <div className="w-24 h-2 bg-primary rounded"></div>
-                        <div className="w-16 h-2 bg-muted rounded"></div>
-                      </div>
-                    </div>
-                    <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-success rounded-full"></div>
-                      <div className="w-3 h-3 bg-accent rounded-full"></div>
-                      <div className="w-3 h-3 bg-destructive rounded-full"></div>
-                    </div>
-                  </div>
-
-                  {/* Content Cards */}
-                  <div className="grid grid-cols-2 gap-4">
-                    {[...Array(4)].map((_, i) => (
-                      <div key={i} className="bg-card rounded-lg p-4 border border-card-border">
-                        <div className="space-y-3">
-                          <div className="w-full h-2 bg-primary/50 rounded"></div>
-                          <div className="space-y-1">
-                            <div className="w-3/4 h-1.5 bg-muted rounded"></div>
-                            <div className="w-1/2 h-1.5 bg-muted rounded"></div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Progress Bar */}
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">Project Progress</span>
-                      <span className="text-xs text-primary">78%</span>
-                    </div>
-                    <div className="w-full bg-muted rounded-full h-2">
-                      <div className="hero-gradient h-2 rounded-full w-3/4"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 hero-gradient rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 accent-gradient rounded-full opacity-30 animate-pulse animate-delay-200"></div>
+    
             </div>
           </div>
         </div>
