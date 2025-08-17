@@ -17,7 +17,7 @@ const features = [
     icon: Users,
     title: 'Seamless Team Collaboration',
     description: 'Invite unlimited team members, assign roles, and collaborate in real-time with integrated communication tools.',
-    color: 'text-success'
+    color: 'text-accent'
   },
   {
     icon: BarChart3,
@@ -35,7 +35,7 @@ const features = [
     icon: MessageSquare,
     title: 'Integrated Communication',
     description: 'Built-in chat, video calls, and comment system to keep all project communication in one place.',
-    color: 'text-success'
+    color: 'text-accent'
   }
 ];
 

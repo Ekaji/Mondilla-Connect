@@ -5,63 +5,94 @@
 /* Mondilla Connect Design System */
 
 @layer base {
+  /* Light theme (default) */
   :root {
-    /* Core Colors - Dark Theme */
-    --background: 220 13% 9%;
-    --foreground: 210 40% 98%;
-    --surface: 220 13% 11%;
-    
-    /* Brand Colors - Emerald & Amber */
-    --primary: 158 64% 52%;      /* Emerald-500 */
-    --primary-foreground: 220 13% 9%;
-    --primary-glow: 162 63% 41%; /* Emerald-600 */
-    
-    --accent: 45 93% 58%;        /* Amber-400 */
-    --accent-foreground: 220 13% 9%;
-    --accent-glow: 43 96% 56%;   /* Amber-500 */
-    
+    /* Core Colors - Light Theme */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 10%;
+    --surface: 0 0% 98%;
+
+    /* Brand Colors - Blue & Purple Gradient (same as dark) */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 234 89% 74%;
+
+    --accent: 234 89% 74%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 250 75% 60%;
+
+    --secondary-brand: 195 100% 50%;
+    --secondary-brand-foreground: 0 0% 100%;
+
     /* Neutral Colors */
-    --card: 220 13% 11%;
-    --card-foreground: 210 40% 98%;
-    --card-border: 220 13% 15%;
-    
-    --secondary: 220 13% 15%;
-    --secondary-foreground: 210 40% 98%;
-    
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 10%;
+    --card-border: 220 13% 90%;
+
+    --secondary: 220 13% 95%;
+    --secondary-foreground: 220 13% 15%;
+
     --muted: 220 9% 46%;
-    --muted-foreground: 220 5% 65%;
-    
-    /* Interactive Elements */
-    --border: 220 13% 15%;
-    --input: 220 13% 15%;
-    --input-foreground: 210 40% 98%;
-    --ring: 158 64% 52%;
-    
-    /* Status Colors */
+    --muted-foreground: 220 5% 35%;
+
+    /* Interactive */
+    --border: 220 13% 85%;
+    --input: 0 0% 100%;
+    --input-foreground: 220 13% 10%;
+    --ring: 217 91% 60%;
+
+    /* Status */
     --success: 142 76% 36%;
     --warning: 38 92% 50%;
     --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
-    
+    --destructive-foreground: 0 0% 100%;
+
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(158 64% 52%), hsl(162 63% 41%));
-    --gradient-accent: linear-gradient(135deg, hsl(45 93% 58%), hsl(43 96% 56%));
-    --gradient-surface: linear-gradient(180deg, hsl(220 13% 11%), hsl(220 13% 9%));
-    
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(217 91% 60%), hsl(234 89% 74%));
+    --gradient-accent: linear-gradient(135deg, hsl(234 89% 74%), hsl(250 75% 60%));
+    --gradient-logo: linear-gradient(135deg, hsl(195 100% 50%), hsl(217 91% 60%), hsl(234 89% 74%), hsl(250 75% 60%));
+    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
+
     /* Shadows */
-    --shadow-soft: 0 2px 8px hsl(220 13% 5% / 0.1);
-    --shadow-medium: 0 4px 16px hsl(220 13% 5% / 0.15);
-    --shadow-strong: 0 8px 32px hsl(220 13% 5% / 0.25);
-    --shadow-glow: 0 0 24px hsl(158 64% 52% / 0.15);
-    
-    /* Spacing & Sizing */
+    --shadow-soft: 0 2px 8px hsl(220 13% 15% / 0.05);
+    --shadow-medium: 0 4px 16px hsl(220 13% 15% / 0.1);
+    --shadow-strong: 0 8px 32px hsl(220 13% 15% / 0.15);
+    --shadow-glow: 0 0 24px hsl(217 91% 60% / 0.15);
+    --shadow-glow-accent: 0 0 32px hsl(234 89% 74% / 0.2);
+
+    /* Other */
     --radius: 0.75rem;
     --section-padding: 5rem 0;
-    
-    /* Animations */
     --transition-fast: all 0.15s ease;
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Dark theme overrides */
+  .dark {
+    --background: 220 13% 9%;
+    --foreground: 210 40% 98%;
+    --surface: 220 13% 11%;
+
+    --card: 220 13% 11%;
+    --card-foreground: 210 40% 98%;
+    --card-border: 220 13% 15%;
+
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 9% 46%;
+    --muted-foreground: 220 5% 65%;
+
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --input-foreground: 210 40% 98%;
+
+    --gradient-surface: linear-gradient(180deg, hsl(220 13% 11%), hsl(220 13% 9%));
+
+    --shadow-soft: 0 2px 8px hsl(220 13% 5% / 0.1);
+    --shadow-medium: 0 4px 16px hsl(220 13% 5% / 0.15);
+    --shadow-strong: 0 8px 32px hsl(220 13% 5% / 0.25);
   }
 }
 
@@ -69,17 +100,17 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
-  
-  /* Smooth scrolling */
+
   html {
     scroll-behavior: smooth;
   }
 }
+
 
 @layer components {
   /* Hero Gradients */
@@ -91,6 +122,10 @@
     background: var(--gradient-accent);
   }
   
+  .logo-gradient {
+    background: var(--gradient-logo);
+  }
+  
   .surface-gradient {
     background: var(--gradient-surface);
   }
@@ -98,6 +133,10 @@
   /* Glow Effects */
   .glow-primary {
     box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--shadow-glow-accent);
   }
   
   /* Animated Underlines */
@@ -118,6 +157,10 @@
     @apply bg-card border border-card-border rounded-xl p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-medium hover:-translate-y-1;
   }
   
+  .feature-card:hover {
+    box-shadow: var(--shadow-medium), var(--shadow-glow);
+  }
+  
   /* Pricing Cards */
   .pricing-card {
     @apply bg-card border border-card-border rounded-xl p-8 transition-all duration-300 hover:border-primary/50 hover:shadow-medium;
@@ -125,10 +168,20 @@
   
   .pricing-card.popular {
     @apply border-primary bg-primary/5 relative;
+    background: linear-gradient(135deg, hsl(217 91% 60% / 0.05), hsl(234 89% 74% / 0.05));
   }
   
   .pricing-card.popular::before {
-    @apply content-['Most_Popular'] absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium;
+    @apply content-['Most_Popular'] absolute -top-3 left-1/2 -translate-x-1/2 text-white px-4 py-1 rounded-full text-sm font-medium;
+    background: var(--gradient-primary);
+  }
+  
+  /* Logo-inspired elements */
+  .brand-element {
+    background: var(--gradient-logo);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
@@ -146,6 +199,10 @@
     animation: scaleIn 0.4s ease-out forwards;
   }
   
+  .animate-gradient {
+    animation: gradientShift 3s ease-in-out infinite;
+  }
+  
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -159,6 +216,11 @@
   @keyframes scaleIn {
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
   
   /* Stagger Animation Delays */
