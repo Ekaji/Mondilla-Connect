@@ -1,68 +1,83 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Mondilla Connect Design System */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    /* Core Colors - Dark Theme */
+    --background: 220 13% 9%;
+    --foreground: 210 40% 98%;
+    --surface: 220 13% 11%;
+    
+    /* Brand Colors - Emerald & Amber */
+    --primary: 158 64% 52%;      /* Emerald-500 */
+    --primary-foreground: 220 13% 9%;
+    --primary-glow: 162 63% 41%; /* Emerald-600 */
+    
+    --accent: 45 93% 58%;        /* Amber-400 */
+    --accent-foreground: 220 13% 9%;
+    --accent-glow: 43 96% 56%;   /* Amber-500 */
+    
+    /* Neutral Colors */
+    --card: 220 13% 11%;
+    --card-foreground: 210 40% 98%;
+    --card-border: 220 13% 15%;
+    
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 220 9% 46%;
+    --muted-foreground: 220 5% 65%;
+    
+    /* Interactive Elements */
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --input-foreground: 210 40% 98%;
+    --ring: 158 64% 52%;
+    
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(158 64% 52%), hsl(162 63% 41%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 93% 58%), hsl(43 96% 56%));
+    --gradient-surface: linear-gradient(180deg, hsl(220 13% 11%), hsl(220 13% 9%));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 8px hsl(220 13% 5% / 0.1);
+    --shadow-medium: 0 4px 16px hsl(220 13% 5% / 0.15);
+    --shadow-strong: 0 8px 32px hsl(220 13% 5% / 0.25);
+    --shadow-glow: 0 0 24px hsl(158 64% 52% / 0.15);
+    
+    /* Spacing & Sizing */
+    --radius: 0.75rem;
+    --section-padding: 5rem 0;
+    
+    /* Animations */
+    --transition-fast: all 0.15s ease;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
