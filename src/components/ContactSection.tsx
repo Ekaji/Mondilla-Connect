@@ -50,10 +50,6 @@ const ContactSection = () => {
     
     // Simulate API call
     setTimeout(() => {
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you within 24 hours.",
-      });
       setFormData({ name: '', email: '', message: '' });
       setIsSubmitting(false);
     }, 1000);
