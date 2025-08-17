@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
+import PartnersSection from '@/components/PartnersSection';
 
 const Index = () => {
   return (
@@ -7,6 +8,7 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <PartnersSection />
       </main>
     </div>
   );
