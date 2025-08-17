@@ -6,7 +6,7 @@ const partners = [
 
 const PartnersSection = () => {
   return (
-    <section className="py-12 bg-surface border-b border-border overflow-hidden">
+    <section className="py-12  border-b border-border overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <p className="text-muted-foreground text-sm font-medium tracking-wide uppercase">
