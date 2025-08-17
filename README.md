@@ -24,7 +24,7 @@ A modern, responsive landing page for a team collaboration and project managemen
     
     ```bash
     # Using npm
-    npm install
+    npm install --legacy-peer-deps
     
     ```
     
